@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #DDC9A3;
+    color: #2B2B2B;
+    line-height: 1.7;
+}
+
+
+header {
+    background-color: #F5F5F5;
+    border-bottom: 3px solid #A7201F;
+    padding: 10px 40px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.logo-container h1 {
+    font-size: 1.4rem;
+    color: #691C32;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #691C32;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #9F2241;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #BC955C;
+    border-radius: 6px;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.dropdown-content li a {
+    color: #691C32;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.hero {
+    position: relative;
+    background-image: url('../assets/img/cbtis.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.hero-overlay h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+}
+
+
+.descripcion {
+    background: linear-gradient(135deg, #BC955C, #DDC9A3); /* Degradado Pantone 465 a 468 */
+    padding: 80px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.descripcion h2 {
+    text-align: center;
+    color: #A7201F; /* Pantone 7420 C */
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.descripcion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.descripcion-texto {
+    font-size: 1.1rem;
+    color: #691C32; /* Pantone 7421 C */
+}
+
+.descripcion-texto p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.descripcion-texto ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.descripcion-texto ul li {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.descripcion-texto ul li i {
+    color: #A7201F;
+    margin-right: 15px;
+    font-size: 1.3rem;
+}
+
+.descripcion-texto ul li:hover {
+    transform: translateX(5px);
+}
+
+.descripcion-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descripcion-imagen img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.descripcion-imagen img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+@media screen and (max-width: 900px) {
+    .descripcion-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .descripcion-imagen img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 60px 40px;
+    background-color: #DDC9A3;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #691C32;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.card i {
+    font-size: 48px;
+    color: #9F2241;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+footer {
+    background-color: #691C32;
+    color: #DDC9A3;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .descripcion {
+        padding: 40px 20px;
+    }
+}
